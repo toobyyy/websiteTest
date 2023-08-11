@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <title>Klanten</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<table class="table col-md-6 ml-3">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Voornaam</th>
+    <th>Achternaam</th>
+    <th>Email</th>
+    <th>Telefoonnummer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="customer : ${customers}">
+    <td th:text="${customer.id}"></td>
+    <td th:text="${customer.firstName}"></td>
+    <td th:text="${customer.lastName}"></td>
+    <td th:text="${customer.email}"></td>
+    <td th:text="${customer.phoneNumber}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<p>
+  <a th:href="@{/customers/new}" class="btn btn-link">Nieuwe gebruiker</a>
+</p>
+</body>
+</html>

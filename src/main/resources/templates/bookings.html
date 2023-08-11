@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <title>Afspraken</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<table class="table col-md-6 ml-3">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Voornaam</th>
+    <th>Achternaam</th>
+    <th>Email</th>
+    <th>Date</th>
+    <th>Tijdstip</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="booking : ${bookings}">
+    <td th:text="${booking.id}"></td>
+    <td th:text="${booking.firstName}"></td>
+    <td th:text="${booking.lastName}"></td>
+    <td th:text="${booking.email}"></td>
+    <td th:text="${booking.date}"></td>
+    <td th:text="${booking.time}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<p>
+  <a th:href="@{/bookings/new}" class="btn btn-link">Nieuwe afspraak</a>
+</p>
+</body>
+</html>
