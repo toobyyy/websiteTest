@@ -1,4 +1,4 @@
-/*package com.example.ylswebsite.model.persistence;
+package com.example.ylswebsite.model.persistence;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,5 +19,3 @@ public class PersistenceConfig {
         return dataSource;
     }
 }
-
- */

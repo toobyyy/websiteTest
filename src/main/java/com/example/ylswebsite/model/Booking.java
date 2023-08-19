@@ -1,6 +1,8 @@
 package com.example.ylswebsite.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -16,13 +18,14 @@ public class Booking {
     private String firstName;
     private String lastName;
     private String email;
-
+    private String phoneNumber;
     public Booking() {}
 
-    public Booking(String firstName, String lastName, String email, LocalDate date, LocalTime time) {
+    public Booking(String firstName, String lastName, String email, String phoneNumber, LocalDate date, LocalTime time) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
         this.time = time;
         this.date = date;
     }
@@ -73,5 +76,13 @@ public class Booking {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

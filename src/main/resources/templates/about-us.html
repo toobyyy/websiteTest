@@ -41,21 +41,21 @@
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <a href="/">Home</a>
-                  <a href="/services">Behandelingen</a>
+                  <a href="/prices">Prijzen</a>
                   <a href="/products">Producten</a>
+                  <a href="/bookings/new">Afspraak maken</a>
                   <a href="/about-us">Over ons</a>
-                  <a href="client.html">Client</a>
-                  <a href="/contact">Contact</a>
                </div>
-               <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-               <a class="logo" href="index.html"><h1>Jazzy's Beauty Care</h1></a></a>
+               <span class="toggle_icon" onclick="openNav()"><img src="/images/toggle-icon.png"></span>
+               <a class="logo" href="/"><h1 class="banner_headtext">Jazzy's Beauty Care</h1></a></a>
                <form class="form-inline ">
                   <div class="login_text">
-                     <ul>
-                        <li><a href="#"><img src="images/user-icon.png"></a></li>
-                        <li><a href="#"><img src="images/bag-icon.png"></a></li>
-                        <li><a href="#"><img src="images/search-icon.png"></a></li>
-                     </ul>
+                     <div><img class="logo_navbar" src="/img/logo_zwart_noBG.png" alt="logo" width="150px" height="50px"></div>
+                     <!--<ul>
+                        <li><a href="/login"><img src="/images/user-icon.png"></a></li>
+                        <li><a href="#"><img src="/images/bag-icon.png"></a></li>
+                        <li><a href="#"><img src="/images/search-icon.png"></a></li>
+                     </ul>-->
                   </div>
                </form>
             </nav>
@@ -77,11 +77,11 @@
                         <p class="about_text mt-4">
                            Door de nieuwe technologie 4 wave biedt het apparaat 4 verschillende golflengtes waar ik mee werk om zo het uiterste uit uw
                            behandeling te halen. Door de krachtigheid dringt het tot in het haarzakje waar het pigment absorbeert
-                           en het permanent wordt beschadigd. Hierdoor wordt het resultaat sneller en effectiever behaald. Waar het apparaat zich van onderscheidt is dat het een constant koelsysteem heeft dat voor de gevoelige huidtypes
+                           en het permanent wordt beschadigd. Hierdoor wordt het resultaat sneller en effectiever behaald. Waar het apparaat zich van onderscheidt is dat het een constante koelsysteem heeft dat voor de gevoelige huidtypes
                            een comfortabele behandeling biedt. Ook heeft het toestel verschillende kopstukken voor de verschillende lichaamsdelen die ik zal behandelen.
                            Alles voor het gemak van mijn klanten.
                         </p>
-                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                        <!--<div class="readmore_bt"><a href="#">Read More</a></div>-->
                      </div>
                   </div>
                   <div class="col-md-6">
@@ -93,41 +93,69 @@
       </div>
       <!-- about section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
+      <div id="contact" class="footer_section layout_padding">
          <div class="container">
-            <div class="footer_logo"><a href="home.html"><img src="images/footer-logo.png"></a></div>
+            <div class="footer_logo"><a href="/"><img src="/img/logo_babyroze_noBG.png"></a></div>
             <div class="contact_section_2">
-               <div class="row">
+               <div class="row footer_row">
                   <div class="col-sm-4">
                      <h3 class="address_text">Contacteer ons</h3>
                      <div class="address_bt">
                         <ul>
                            <li>
-                              <a href="#">
-                                 <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Adres: Vlaamsekaai Antwerpen</span>
+                              <a href="https://www.google.com/maps/place/Vlaamsekaai+88,+2000+Antwerpen/@51.2067154,4.3846197,17z/data=!3m1!4b1!4m6!3m5!1s0x47c3f6949ab51581:0x4b803a66240d7f27!8m2!3d51.2067154!4d4.3871946!16s%2Fg%2F11c27x5q44?entry=ttu">
+                                 <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Adres: Vlaamsekaai 88, 2000 Antwerpen</span>
                               </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Telefoon: 0477 77 77 77</span>
+                              <a href="tel:+32471687355">
+                                 <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Telefoon: 0471 68 73 55</span>
                               </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : Jazzy@Jazzysbeautycare.com</span>
+                              <a href="mailto:Info@Jazzysbeautyscare.be">
+                                 <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : Info@Jazzysbeautycare.be</span>
                               </a>
                            </li>
                         </ul>
                      </div>
                   </div>
                   <div class="col-sm-4">
-                     <div class="footer_logo_1"><a href="home.html"><h3 class="address_text">Jazzy's Beauty Care</h3></a></div>
-                     <p class="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                     <div class="footer_logo_1"><a href="/"><img class="logo_footer" src="/img/logo_babyroze_noBG.png"></a></div>
                   </div>
                   <div class="col-sm-4">
                      <div class="main">
-                        <h3 class="address_text">Populaire behandelingen</h3>
-                        <p class="ipsum_text">dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                        <h3 class="address_text">Openingsuren:</h3>
+                        <ul class="business_hours">
+                           <li class="text-capitalize">
+                              Maandag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Dinsdag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Woensdag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Donderdag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Vrijdag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Zaterdag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                           <li class="text-capitalize">
+                              Zondag
+                              <span class="pull-right">09:00 - 19:00</span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -135,16 +163,13 @@
             <div class="social_icon">
                <ul>
                   <li>
-                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                     <a href="#"><i class="fa fa-facebook" style="color: rgba(240,154,205,0.99)" aria-hidden="true"></i></a>
                   </li>
                   <li>
-                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                     <a href="#"><i class="fa fa-linkedin" style="color: rgba(240,154,205,0.99)" aria-hidden="true"></i></a>
                   </li>
                   <li>
-                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                     <a href="#"><i class="fa fa-instagram" style="color: rgba(240,154,205,0.99)" aria-hidden="true"></i></a>
                   </li>
                </ul>
             </div>
@@ -154,7 +179,7 @@
       <!-- copyright section start -->
       <div class="copyright_section">
          <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+            <p class="copyright_text"></p>
          </div>
       </div>
       <!-- copyright section end -->
