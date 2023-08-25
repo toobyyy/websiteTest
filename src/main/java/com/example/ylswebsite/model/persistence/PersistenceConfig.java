@@ -14,8 +14,8 @@ public class PersistenceConfig {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/TEST?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8");
-        dataSource.setUsername("Mirror");
-        dataSource.setPassword("Mirror");
+        dataSource.setUsername("");
+        dataSource.setPassword("");
         return dataSource;
     }
 }
