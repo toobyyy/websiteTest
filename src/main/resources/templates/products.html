@@ -40,22 +40,24 @@
             <nav class="navbar navbar-light bg-light justify-content-between">
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <h3 style="color: red; font-weight: bold;" sec:authorize="hasRole('ADMIN')">KLANTEN</h3>
                   <a href="/">Home</a>
                   <a href="/prices">Prijzen</a>
                   <a href="/products">Producten</a>
                   <a href="/bookings/new">Afspraak maken</a>
                   <a href="/about-us">Over ons</a>
+                  <a href="/account">Account</a>
+                  <a href="/bookings/mybookings">Mijn afspraken</a>
+                  <br sec:authorize="hasRole('ADMIN')">
+                  <h3 style="color: red; font-weight: bold;" sec:authorize="hasRole('ADMIN')">ADMIN</h3>
+                  <a sec:authorize="hasRole('ADMIN')" href="/bookings/showallbookings">Alle afspraken</a>
+                  <a sec:authorize="hasRole('ADMIN')" href="/users">Klanten</a>
                </div>
                <span class="toggle_icon" onclick="openNav()"><img src="/images/toggle-icon.png"></span>
                <a class="logo" href="/"><h1 class="banner_headtext">Jazzy's Beauty Care</h1></a></a>
                <form class="form-inline ">
                   <div class="login_text">
-                     <div><img class="logo_navbar" src="/img/logo_zwart_noBG.png" alt="logo" width="150px" height="50px"></div>
-                     <!--<ul>
-                        <li><a href="/login"><img src="/images/user-icon.png"></a></li>
-                        <li><a href="#"><img src="/images/bag-icon.png"></a></li>
-                        <li><a href="#"><img src="/images/search-icon.png"></a></li>
-                     </ul>-->
+                     <img class="logo_navbar" src="/img/logo_zwart_noBG.png" alt="logo" width="150px" height="50px">
                   </div>
                </form>
             </nav>
@@ -338,7 +340,7 @@
                            </li>
                            <li class="text-capitalize">
                               Zondag
-                              <span class="pull-right">09:00 - 19:00</span>
+                              <span class="pull-right">Gesloten</span>
                            </li>
                         </ul>
                      </div>

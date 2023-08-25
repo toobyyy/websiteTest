@@ -28,19 +28,12 @@ function changeDate(data) {
         addTimeslots()
         let element = {date: this.value}
         checkIfDateExists(element.date, data)
-        blockSunday()
-    })
-}
-
-function blockSunday() {
-    const picker = document.getElementById('date');
-    picker.addEventListener('change', function(e){
-        var day = new Date(this.value).getUTCDay();
-        if([5,0].includes(day)){
-            e.preventDefault();
+        let day = new Date(this.value).getUTCDay();
+        if([0].includes(day)){
             removeOptions();
+            alert("Sorry, wij zijn gesloten op deze dag!")
         }
-    });
+    })
 }
 
 function checkIfDateExists(elementDate, data) {

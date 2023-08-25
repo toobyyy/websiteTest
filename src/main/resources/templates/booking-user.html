@@ -91,25 +91,25 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="label" for="firstname">Voornaam</label>
-                        <input dtype="text" class="form-control" name="firstName" id="firstname" placeholder="Voornaam" required>
+                        <input th:value="${user.firstName}" type="text" class="form-control" name="firstName" id="firstname" placeholder="Voornaam" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="label" for="lastName">Achternaam</label>
-                        <input type="text" class="form-control" name="lastName" id="lastname" placeholder="Achternaam" required>
+                        <input th:value="${user.lastName}"  type="text" class="form-control" name="lastName" id="lastName" placeholder="Achternaam" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="label" for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <input th:value="${#authentication.getPrincipal().getUsername()}" type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="label" for="phoneNumber">Telefoon</label>
-                        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Telefoonnummer" required>
+                        <input th:value="${user.phoneNumber}" type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Telefoonnummer" required>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -122,9 +122,9 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="label" for="time">Tijdstip</label>
-                          <!--<select class="form-control" id="time">
-                            <option th:each="time : ${timeslots}" th:value="${time}" th:text="${time}"</option>
-                          </select>-->
+                        <!--<select class="form-control" id="time">
+                          <option th:each="time : ${timeslots}" th:value="${time}" th:text="${time}"</option>
+                        </select>-->
                         <select class="form-control" id="time" name="time" required>
 
                         </select>

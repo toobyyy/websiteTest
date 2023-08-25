@@ -70,7 +70,9 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    color: white;
+}
 
 p {
     margin-top: 0;
@@ -312,7 +314,9 @@ h1, .h1 {
     font-size: 2.5rem; }
 
 h2, .h2 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: white;
+}
 
 h3, .h3 {
     font-size: 1.75rem; }
@@ -5398,9 +5402,6 @@ button.bg-danger:hover,
 button.bg-danger:focus {
     background-color: #bd2130 !important; }
 
-.bg-light {
-    background-color: #f8f9fa !important; }
-
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
@@ -8164,7 +8165,8 @@ h1, h2, h3, h4, h5,
     background: #2553b8 !important; }
 
 .ftco-section {
-    padding: 7em 0; }
+    background-color: #252525;
+}
 
 .ftco-no-pt {
     padding-top: 0; }
@@ -8174,7 +8176,7 @@ h1, h2, h3, h4, h5,
 
 .heading-section {
     font-size: 28px;
-    color: #000; }
+    color: white; }
 
 .img {
     background-size: cover;
@@ -8212,7 +8214,7 @@ textarea.form-control {
     width: 100%; }
 
 .contact-wrap {
-    background: #e8edf0; }
+    background: #fbd8d5; }
 
 .dbox {
     width: 100%;
@@ -8321,7 +8323,7 @@ textarea.form-control {
     color: #2553b8; }
 
 .bg-light {
-    background-color: #e69f9f1f !important
+    background-color: #fbcdcdb5 !important
 }
 
 /* footer section start */

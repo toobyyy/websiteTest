@@ -1,5 +1,6 @@
 package com.example.ylswebsite.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -15,6 +16,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 public class SecurityConfig {
+
+    @Autowired
     private UserDetailsService userDetailsService;
     @Bean
     public static PasswordEncoder passwordEncoder(){
@@ -25,14 +28,18 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers("/bookings/showbookings").authenticated()
+                        authorize.requestMatchers("/bookings/showallbookings").hasRole("ADMIN")
                                 .requestMatchers(HttpMethod.POST, "/bookings/confirmed").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/register/save").permitAll()
+                                .requestMatchers("/users").hasRole("ADMIN")
+                                .requestMatchers("/account").authenticated()
+                                .requestMatchers("/bookings/mybooking").authenticated()
+                                .requestMatchers("/bookings/mybookings").authenticated()
                                 .anyRequest().permitAll()
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/welcome")
                                 .permitAll()
                 ).logout(
                         logout -> logout
